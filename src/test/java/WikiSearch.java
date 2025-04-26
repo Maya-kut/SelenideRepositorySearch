@@ -3,6 +3,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 
 public class WikiSearch {
@@ -22,9 +23,10 @@ public class WikiSearch {
         void findSelenideWikiSearch() {
             open("https://github.com/");
             $("[data-action='click:qbsearch-input#searchInputContainerClicked']").click();
-//            $("#query-builder-test").setValue("selenide").pressEnter();
-//            $$("ul.repo-list li").first().$("a").click();
-            sleep(5000);
+            $("#query-builder-test").setValue("selenide").pressEnter();
+            $$("[data-testid='results-list']").first().$("a").click();
+
+            sleep(10000);
 
 
         }
