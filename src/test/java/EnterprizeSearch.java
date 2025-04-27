@@ -31,10 +31,7 @@ public class EnterprizeSearch {
                 $("#hero-section-brand-heading").shouldHave(text("The AI-powered"));
                 $("#hero-section-brand-heading").shouldHave(text("developer platform"));
 
-
-
-
-            sleep(10000);
+//            sleep(10000);
 
 
             }
