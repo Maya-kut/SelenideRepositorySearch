@@ -26,6 +26,8 @@ public class WikiSearch {
             $("#query-builder-test").setValue("selenide").pressEnter();
             $$("[data-testid='results-list']").first().$("a").click();
             $("#wiki-tab").click();
+            $("#wiki-body").shouldHave(text("Soft assertions"));
+
 
             sleep(10000);
 
