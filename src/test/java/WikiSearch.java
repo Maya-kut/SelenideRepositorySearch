@@ -38,7 +38,7 @@ public class WikiSearch {
             $$("a").findBy(text("Soft assertions")).click();
 
             //проверка наличия примера о JUnit5
-            $("#repo-content-pjax-container").shouldHave(text("JUnit5"));
+            $("#wiki-body").shouldHave(text("JUnit5"));
 
 
 
