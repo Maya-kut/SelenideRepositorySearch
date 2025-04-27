@@ -25,6 +25,7 @@ public class WikiSearch {
             $("[data-action='click:qbsearch-input#searchInputContainerClicked']").click();
             $("#query-builder-test").setValue("selenide").pressEnter();
             $$("[data-testid='results-list']").first().$("a").click();
+            $("#wiki-tab").click();
 
             sleep(10000);
 
