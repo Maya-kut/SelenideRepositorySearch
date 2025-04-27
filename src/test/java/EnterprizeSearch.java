@@ -26,8 +26,10 @@ public class EnterprizeSearch {
             void findSelenideEnterprize() {
                 //переход на страницу гитхаба
                 open("https://github.com/");
+                //открытие Solutions
 //                $(".HeaderMenu-nav").find(byText("Solutions")).click();
                 $(byTagAndText("button","Solutions")).hover();
+                //переход во вкладку Enterprises
 //                $$("a").findBy(text("Enterprises")).click();
                 $(byTagAndText("a","Enterprises")).click();
 
