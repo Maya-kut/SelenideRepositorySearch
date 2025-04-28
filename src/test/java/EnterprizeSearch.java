@@ -14,29 +14,26 @@ import static com.codeborne.selenide.Selenide.$;
 public class EnterprizeSearch {
 
             @BeforeAll
-            static void beforeAll() {
+            static void setUpConfiguration() {
                 Configuration.browserSize = "1920x1080";
-//            Configuration.browser = "chrome";
-//            chromeConfiguration.baseUrl = "";
+                Configuration.browser = "chrome";  //но ведь метод Сonfiguration.browser по дефолту устанавливает хром
                 Configuration.pageLoadStrategy = "eager";
-//            Configuration.holdBrowserOpen = true;
             }
 
             @Test
-            void findSelenideEnterprize() {
-                //переход на страницу гитхаба
+            void tryToFindSelenideEnterprize() {
+
                 open("https://github.com/");
-                //открытие Solutions
-//                $(".HeaderMenu-nav").find(byText("Solutions")).click();
+
+//                $(".HeaderMenu-nav").find(byText("Solutions")).click(); - хочу оставить как второй вариант прохождения теста
                 $(byTagAndText("button","Solutions")).hover();
-                //переход во вкладку Enterprises
-//                $$("a").findBy(text("Enterprises")).click();
+
+//                $$("a").findBy(text("Enterprises")).click(); - хочу оставить как второй вариант прохождения теста
                 $(byTagAndText("a","Enterprises")).click();
 
                 $("#hero-section-brand-heading").shouldHave(text("The AI-powered"));
                 $("#hero-section-brand-heading").shouldHave(text("developer platform"));
 
-//            sleep(10000);
 
 
             }

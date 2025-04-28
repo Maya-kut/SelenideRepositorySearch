@@ -10,9 +10,9 @@ public class FindingSelenideWiki {
         @BeforeAll
         static void setUpConfiguration() {
             Configuration.browserSize = "1920x1080";
-            Configuration.browser = "chrome";
+            Configuration.browser = "chrome"; //но ведь метод Сonfiguration.browser по дефолту устанавливает хром
             Configuration.pageLoadStrategy = "eager";
-//            Configuration.holdBrowserOpen = true;
+
         }
 
         @Test
