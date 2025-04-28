@@ -11,14 +11,14 @@ public class WikiSearch {
         @BeforeAll
         static void setUpConfiguration() {
             Configuration.browserSize = "1920x1080";
-//            Configuration.browser = "chrome";
+            Configuration.browser = "chrome";
             Configuration.pageLoadStrategy = "eager";
 //            Configuration.holdBrowserOpen = true;
         }
 
         @Test
         void tryTofindSelenideWiki() {
-            //переход на страницу гитхаба
+            //переход на страницу гитхаба -- коментарии учили на лекции оставлять
             open("https://github.com/");
             $("[data-action='click:qbsearch-input#searchInputContainerClicked']").click();
 
