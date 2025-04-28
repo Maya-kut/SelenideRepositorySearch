@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.Selenide.$;
 
-public class EnterprizeSearch {
+public class gitHubEnterprizeSearching {
 
             @BeforeAll
             static void setUpConfiguration() {
