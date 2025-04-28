@@ -1,13 +1,12 @@
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.CollectionCondition.exactTexts;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 
-public class WikiSearch {
+public class WikiSearchTest {
         @BeforeAll
         static void setUpConfiguration() {
             Configuration.browserSize = "1920x1080";
@@ -36,12 +35,7 @@ public class WikiSearch {
             //проверка наличия примера о JUnit5
             $("#wiki-body").shouldHave(text("JUnit5"));
 
-
-
-//            sleep(10000);
-
-
-        
+       
 
 
     }
