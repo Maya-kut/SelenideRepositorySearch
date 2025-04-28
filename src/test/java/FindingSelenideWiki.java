@@ -6,7 +6,7 @@ import static com.codeborne.selenide.CollectionCondition.exactTexts;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 
-public class WikiSearchTest {
+public class FindingSelenideWiki {
         @BeforeAll
         static void setUpConfiguration() {
             Configuration.browserSize = "1920x1080";
@@ -16,23 +16,18 @@ public class WikiSearchTest {
         }
 
         @Test
-        void tryTofindSelenideWiki() {
-            //переход на страницу гитхаба -- коментарии учили на лекции оставлять
+        void tryToFindSelenideWiki() {
             open("https://github.com/");
             $("[data-action='click:qbsearch-input#searchInputContainerClicked']").click();
 
-            //ввод значения для поиска
             $("#query-builder-test").setValue("selenide").pressEnter();
             $$("[data-testid='results-list']").first().$("a").click();
 
-            //переход во вкладку Wiki
             $("#wiki-tab").click();
 
-            //проверка текста Soft assertions
             $("#wiki-body").shouldHave(text("Soft assertions"));
             $$("a").findBy(text("Soft assertions")).click();
 
-            //проверка наличия примера о JUnit5
             $("#wiki-body").shouldHave(text("JUnit5"));
 
        
