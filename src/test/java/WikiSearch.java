@@ -8,20 +8,16 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 
 public class WikiSearch {
-    @Nested
-    class SelenideWikiSearch{
-
         @BeforeAll
-        static void beforeAll() {
+        static void setUpConfiguration() {
             Configuration.browserSize = "1920x1080";
 //            Configuration.browser = "chrome";
-//            chromeConfiguration.baseUrl = "";
             Configuration.pageLoadStrategy = "eager";
 //            Configuration.holdBrowserOpen = true;
         }
 
         @Test
-        void findSelenideWikiSearch() {
+        void tryTofindSelenideWiki() {
             //переход на страницу гитхаба
             open("https://github.com/");
             $("[data-action='click:qbsearch-input#searchInputContainerClicked']").click();
@@ -45,7 +41,7 @@ public class WikiSearch {
 //            sleep(10000);
 
 
-        }
+        
 
 
     }
